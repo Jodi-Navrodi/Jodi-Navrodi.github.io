@@ -9,12 +9,12 @@ function configureFolderMotion(){
  if(!folderTouch.matches||folderReduced.matches||!('IntersectionObserver' in window))return;
  folderObserver=new IntersectionObserver(entries=>{
   for(const entry of entries){
-   if(!entry.isIntersecting)continue;
+   if(!entry.isIntersecting||entry.intersectionRatio<.85)continue;
    const card=entry.target.closest('.project-folder');
    requestAnimationFrame(()=>requestAnimationFrame(()=>card.classList.add('is-open')));
    folderObserver.unobserve(entry.target);
   }
- },{threshold:.35});
+ },{threshold:.85});
  folderCards.forEach(card=>{
   card.classList.add('folder-motion-ready');
   folderObserver.observe(card.querySelector('.folder-cover'));
