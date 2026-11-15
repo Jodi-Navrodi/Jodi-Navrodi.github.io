@@ -1,0 +1,52 @@
+/* Portfolio foundations. All pages use these roles; product artwork keeps its own UI. */
+:root {
+  --paper:#fcfcfc;
+  --ink:#161618;
+  --body:#515156;
+  --muted:#737379;
+  --line:#e6e6e9;
+  --surface:#f5f5f7;
+  --accent:#2b68aa;
+  --overlay:#080909aa;
+  --shadow:#0809090b;
+  --font-ui:Inter,Arial,sans-serif;
+  --font-hand:Vasek,cursive;
+  --space-1:8px;
+  --space-2:16px;
+  --space-3:24px;
+  --space-4:32px;
+  --space-5:48px;
+  --space-6:64px;
+  --section-gap:clamp(96px,10vw,144px);
+  --chapter-gap:128px;
+  --media-gap:48px;
+  --content-width:1104px;
+  --reading-width:760px;
+  --radius-card:20px;
+  --radius-control:10px;
+  --title-size:clamp(44px,5vw,64px);
+  --heading-size:36px;
+  --subheading-size:22px;
+  --text-main:26px;
+  --text-body:18px;
+  --text-small:14px;
+  --leading-body:1.65;
+  --motion-duration:560ms;
+  --motion-ease:cubic-bezier(.22,.61,.36,1);
+}
+@media(max-width:760px) {
+  :root {--reading-width:100%;--chapter-gap:96px;--heading-size:30px;--media-gap:40px}
+}
+@media(max-width:620px) {
+  :root {
+    --section-gap:88px;
+    --chapter-gap:80px;
+    --media-gap:32px;
+    --radius-card:16px;
+    --title-size:42px;
+    --heading-size:28px;
+    --subheading-size:20px;
+    --text-main:22px;
+    --text-body:16px;
+  }
+}

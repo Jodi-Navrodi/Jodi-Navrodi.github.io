@@ -1,0 +1,13 @@
+/* CryptoPulse previews share a 360 x 780 viewport and independent fixed panels. */
+.phone-hover{isolation:isolate;background:#070707}
+.phone-hover img{pointer-events:none;user-select:none;-webkit-user-drag:none}
+.phone-hover .phone-scroll-window{position:absolute;inset:var(--preview-head,12.82051282%) 0 11.79487179%;overflow:hidden;background:#070707}
+.phone-hover .phone-scroll-track{position:absolute;top:0;left:0;width:100%;aspect-ratio:var(--preview-track,360/1806);transform:translate3d(0,0,0)}
+.phone-hover .phone-scroll-content{position:absolute;top:var(--preview-content-top,1.07973422%);left:var(--preview-content-left,4.30555556%);width:var(--preview-content-width,95.83333333%);max-width:none;height:auto}
+.phone-hover .phone-fixed-header{position:absolute;z-index:2;top:0;left:0;width:100%;height:auto}
+.phone-hover .phone-fixed-bottom{position:absolute;z-index:2;bottom:0;left:0;width:100%;aspect-ratio:360/92;background:#070707}
+.phone-hover .phone-fixed-bottom>img{display:block;width:100%;height:auto}
+.phone-hover .phone-fixed-system{position:absolute;bottom:0;left:0}
+@media(prefers-reduced-motion:reduce){.phone-hover .phone-scroll-track{transform:none!important}}
+
+.phone-hover .phone-scroll-filters{position:absolute;top:1.41093474%;left:4.44444444%;width:91.11111111%;max-width:none;height:auto}

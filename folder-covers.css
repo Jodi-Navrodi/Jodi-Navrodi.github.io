@@ -1,0 +1,28 @@
+/* The Figma composition is the fully open state. All geometry is proportional. */
+.project-folder .folder-cover{background:transparent;container-type:inline-size;isolation:isolate;cursor:pointer}
+.folder-stage{position:absolute;overflow:visible;border-radius:2.15cqw}
+.folder-layer,.folder-glass{position:absolute;display:block;pointer-events:none;user-select:none}
+.folder-layer{object-fit:fill}
+.folder-back{z-index:0}
+.folder-screen-clip{position:absolute;inset:0;z-index:1;clip-path:inset(-25% -25% 7% -25%);pointer-events:none}
+.folder-screen{z-index:1;transform-origin:50% 85%;transform:translate(0,0) rotate(0);transition:transform 480ms cubic-bezier(.22,.61,.36,1)}
+.folder-glass{z-index:10;-webkit-backdrop-filter:blur(3cqw);backdrop-filter:blur(3cqw);-webkit-mask-image:var(--pocket-mask);mask-image:var(--pocket-mask);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.folder-front{z-index:11}
+.folder-badge{z-index:12}
+.project-folder .project-details{flex:1}
+.project-folder:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:8px}
+@media(hover:hover) and (pointer:fine){
+ .project-folder .folder-screen{transform:translate(var(--rest-x),var(--rest-y)) rotate(var(--rest-angle))}
+ .project-folder:hover .folder-screen,.project-folder:focus-visible .folder-screen{transform:translate(0,0) rotate(0)}
+}
+@media(hover:none),(pointer:coarse){
+ .folder-motion-ready .folder-screen{transform:translate(var(--rest-x),var(--rest-y)) rotate(var(--rest-angle))}
+ .folder-motion-ready.is-open .folder-screen{transform:translate(0,0) rotate(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .project-folder .folder-screen{transform:none!important;transition:none!important}
+}
+
+/* Live status text follows the site language and scales with its cover. */
+.folder-status{display:flex;align-items:center;justify-content:center;gap:.8cqw;padding:0 1.2cqw;border-radius:999px;background:#faf5d6;color:#5b563b;font-size:2.2cqw;line-height:1;white-space:nowrap}
+.folder-status::before{content:"";width:1cqw;height:1cqw;flex-shrink:0;border-radius:50%;background:#8e8244}

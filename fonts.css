@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/golos-0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/golos-1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/golos-2.ttf) format('truetype');
+}
+
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-0.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-1.ttf') format('truetype')}
+@font-face{font-family:'Vasek';font-style:italic;font-weight:400;font-display:swap;src:url('assets/fonts/vasek-italic.ttf') format('truetype')}

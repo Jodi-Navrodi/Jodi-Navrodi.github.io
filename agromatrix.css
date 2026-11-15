@@ -1,0 +1,182 @@
+/* AgroMatrix v10: shared portfolio grid, live diagrams and source-blurred UI. */
+.agro-case{--diagram-ink:#1f2a1f;--diagram-muted:#5b665b;--diagram-line:#accdba;--diagram-accent:#1e914e;--diagram-soft:#e2eae5}
+.agro-case .case-intro{padding-bottom:0}
+.agro-case .case-subtitle{max-width:var(--case-copy)}
+.agro-case .case-lead+.case-lead{margin-top:20px}
+.agro-hero{margin-top:32px;container-type:inline-size}
+.agro-hero-art{position:relative;width:100%;aspect-ratio:1104/467;isolation:isolate}
+.agro-hero-field{position:absolute;left:0;top:13.276231%;width:100%;height:auto;border-radius:8px}
+.agro-hero-laptop{position:absolute;left:36.050725%;top:0;width:63.949275%;height:auto}
+.agro-hero figcaption{max-width:var(--case-copy);margin-top:12px}
+.agro-product-map{max-width:var(--case-copy);margin:32px 0 0}
+.agro-product-map>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5}
+.agro-product-map dt{font-weight:500}
+.agro-product-map dd{margin:0;color:var(--body)}
+.agro-subsection{margin-top:var(--media-gap)}
+.agro-subsection h3{font-size:var(--subheading-size);font-weight:500;line-height:1.4;margin:0 0 20px}
+.agro-subsection p{font-size:var(--text-body);line-height:var(--leading-body);color:var(--body)}
+.agro-interface{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-card);margin-top:var(--media-gap)}
+.agro-interface>img{display:block;width:100%;height:auto;border-radius:4px}
+.agro-interface figcaption{max-width:none;margin-top:12px;opacity:1;font-size:14px}
+.agro-diagram{margin-top:var(--media-gap);padding:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-card);color:var(--diagram-ink)}
+.agro-diagram>header{margin-bottom:24px}
+.agro-diagram h3{font-size:25px;font-weight:500;line-height:1.4;margin:0 0 8px;letter-spacing:-.475px}
+.agro-diagram>header p{font-size:14px;line-height:1.4;color:var(--body)}
+.agro-diagram h4{font-size:15px;font-weight:500;line-height:1.4;margin:0}
+.agro-diagram .diagram-small{font-size:12px;line-height:1.4;color:var(--diagram-muted)}
+.diagram-card{min-width:0;padding:16px;border:1px solid var(--diagram-line);border-radius:16px;background:#fff;display:flex;flex-direction:column}
+.diagram-row{padding:12px;border:1px solid var(--diagram-line);border-radius:6px;background:#f9f9f9;font-size:13px;line-height:1.4;color:#2f4a1f;min-width:0}
+.diagram-row.selected{background:var(--diagram-soft);border-color:var(--diagram-accent)}
+.diagram-row.blank{min-height:45px;background:#fff}
+.diagram-action{display:flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;border:1px solid var(--diagram-accent);border-radius:999px;background:var(--diagram-accent);color:#fff;font-size:13px;line-height:1.4;text-align:center}
+.diagram-action.secondary{color:#2f4a1f;background:#fff}
+.diagram-caption{max-width:none;margin-top:24px;opacity:1;font-size:14px;line-height:1.4;color:var(--diagram-ink)}
+.diagram-caption p+p{font-size:13px;line-height:1.4;color:var(--diagram-muted);margin-top:10px}
+.diagram-structure>header{margin-bottom:32px}
+.diagram-structure .diagram-caption{text-align:center}
+.workspace-navigation{display:flex;align-items:center;gap:48px;padding:16px 20px;border-radius:16px 16px 0 0;background:var(--diagram-soft);font-size:13px;line-height:1.4;color:#2f4a1f}
+.workspace-navigation>span{font-weight:500}
+.workspace-navigation>div{display:flex;gap:40px;flex-wrap:wrap;color:var(--diagram-muted)}
+.workspace-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:20px;background:#fff;border-radius:0 0 16px 16px}
+.workspace-columns .diagram-card{min-height:304px;gap:16px}
+.workspace-columns .diagram-card>p{margin-top:auto}
+.workspace-list-items{display:grid;gap:12px}
+.workspace-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.workspace-tabs span{padding:6px 14px;border-radius:999px;background:var(--diagram-soft);color:#2f4a1f;font-size:12px;line-height:1.4}
+.workspace-tabs .active{background:var(--diagram-accent);color:white}
+.workspace-skeleton{display:grid;gap:6px}
+.workspace-skeleton i,.workspace-action-skeleton i{display:block;border-radius:4px;background:var(--diagram-soft);height:20px}
+.workspace-skeleton i:nth-child(2){width:78%}
+.workspace-skeleton i:nth-child(3){width:66%}
+.workspace-skeleton i:last-child{height:72px;margin-top:14px}
+.workspace-actions .diagram-action{min-height:42px}
+.workspace-action-skeleton{display:grid;gap:8px}
+.workspace-action-skeleton i{height:44px}
+.comparison-grid{display:grid;grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr);gap:32px;align-items:stretch}
+.monitoring-card{min-height:363px;gap:10px}
+.monitoring-card>header{margin-bottom:10px}
+.monitoring-card header p{margin-top:4px}
+.agro-diagram .diagram-eyebrow{font-size:11px;line-height:1.4;letter-spacing:.08em;color:#8a948a;margin:10px 0 0}
+.diagram-connector{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:0}
+.diagram-connector p{font-size:14px;line-height:1.4;color:var(--diagram-muted);text-align:center}
+.diagram-connector img{display:block;width:120px;max-width:100%;height:auto}
+.route-grid{display:grid;grid-template-columns:minmax(0,1fr) 37px minmax(0,1fr) 37px minmax(0,1fr);gap:0 8px;align-items:stretch}
+.route-card{min-height:224px;gap:20px}
+.route-card h4{font-size:15px}
+.route-card h4 span{display:inline}
+.route-questions{display:grid;gap:12px;font-size:13px;line-height:1.4;color:var(--diagram-muted)}
+.related-request{margin-top:auto;padding:12px;background:var(--diagram-soft);border-radius:6px;font-size:12px;line-height:1.4;text-align:center}
+.route-requests{display:grid;gap:8px}
+.route-requests .diagram-row{background:var(--diagram-soft);border:0;padding:8px 12px}
+.route-card>.diagram-action{margin-top:auto}
+.route-final>p{margin-top:16px}
+.route-grid>.diagram-connector{min-height:224px}
+.route-grid>.diagram-connector img,.recommendation-grid>.diagram-connector img{width:37px;height:24px}
+.route-return{text-align:center;margin-top:0;min-width:0}
+.route-return img{display:block;width:100%;height:auto;margin:0 auto 8px}
+.volume-groups{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:110px;margin-top:var(--media-gap)}
+.volume-segments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--diagram-line);border-radius:8px;overflow:hidden}
+.volume-segments>span{padding:14px 20px;background:var(--diagram-accent);color:#fff;font-size:13px;line-height:1.4}
+.volume-segments>span:nth-child(2){background:#a7cfb8;color:#080909}
+.volume-segments>span:nth-child(3){background:var(--diagram-soft);color:#080909}
+.volume-total>p{margin-top:20px}
+.volume-total-bar{height:8px;border-radius:999px;background:var(--diagram-accent);margin-top:8px}
+.volume-discussion>span{display:flex;align-items:center;justify-content:center;padding:12px;border:1px dashed var(--diagram-accent);border-radius:8px;background:#fff;font-size:13px;line-height:1.4;text-align:center}
+.volume-discussion>p{margin-top:16px}
+.diagram-volumes .diagram-caption{margin-top:var(--media-gap)}
+.recommendation-grid{display:grid;grid-template-columns:minmax(0,1fr) 37px minmax(0,1fr);gap:16px;align-items:stretch}
+.notification-card,.recommendation-card{gap:20px}
+.notification-card header p,.recommendation-card header p{margin-top:4px}
+.notification-list{display:grid;gap:8px}
+.notification-row{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:60px;padding:16px 12px;background:#f9f9f9;border:1px solid var(--diagram-line);border-radius:6px;font-size:13px;line-height:1.4;color:#8a948a}
+.notification-tag{border:1px dashed var(--diagram-accent);border-radius:999px;background:#fff;padding:4px 16px;font-size:12px}
+.notification-card>p{margin-top:auto;padding-top:12px}
+.recommendation-card{gap:12px}
+.recommendation-object{display:grid;gap:12px;padding:16px;border:1px solid var(--diagram-accent);border-radius:16px;background:var(--diagram-soft);font-size:14px;line-height:1.4}
+.recommendation-object>div{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.object-state{border:1px solid var(--diagram-accent);border-radius:999px;background:#fff;padding:4px 18px;color:#2f4a1f;font-size:12px}
+.recommendation-object p{font-size:13px;color:var(--diagram-muted)}
+.recommendation-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.recommendation-actions .diagram-row{text-align:center;font-size:12px}
+@media(min-width:761px){
+ .agro-hero figcaption{margin-top:calc(12px - 5.525362cqw);max-width:34%}
+ .workspace-columns .diagram-card>h4{min-height:42px}
+ .monitoring-card>header,.notification-card>header,.recommendation-card>header{min-height:64px}
+ .comparison-grid>.diagram-connector{align-self:center}
+ .route-grid>.route-card:first-child{grid-column:1;grid-row:1}
+ .route-grid>.diagram-connector:nth-child(2){grid-column:2;grid-row:1;align-self:center}
+ .route-grid>.route-card:nth-child(3){grid-column:3;grid-row:1}
+ .route-grid>.route-return{grid-column:1/4;grid-row:2}
+ .route-grid>.diagram-connector:nth-child(5){grid-column:4;grid-row:1;align-self:center}
+ .route-grid>.route-final{display:contents}
+ .route-final>.route-card{grid-column:5;grid-row:1}
+ .route-final>p{grid-column:5;grid-row:2;align-self:start}
+ .route-grid>.route-card>h4,.route-final>.route-card>h4{min-height:42px}
+}
+@media(max-width:1000px){
+
+ .agro-diagram{padding:28px}
+ .workspace-columns{gap:12px;padding:16px}
+ .workspace-columns .diagram-card{padding:12px}
+ .workspace-navigation,.workspace-navigation>div{gap:24px}
+ .workspace-tabs span{padding:5px 9px}
+ .comparison-grid{grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);gap:20px}
+ .diagram-connector p{font-size:12px}
+ .volume-groups{grid-template-columns:minmax(0,1fr) 220px;gap:32px}
+ .volume-segments>span{padding:14px 12px}
+ .route-grid{grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr)}
+ .route-card{padding:12px}
+ .route-card h4{font-size:14px}
+}
+@media(max-width:760px){
+
+ .workspace-columns,.comparison-grid,.recommendation-grid,.route-grid{grid-template-columns:minmax(0,1fr)}
+ .workspace-columns{padding:16px}
+ .workspace-columns .diagram-card{min-height:0;padding:16px}
+ .workspace-navigation{align-items:start;gap:16px;flex-direction:column}
+ .workspace-navigation>div{gap:12px 24px}
+ .workspace-list-items{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .workspace-list-items .diagram-row{min-height:44px}
+ .monitoring-card{min-height:0}
+ .diagram-connector{min-height:80px;gap:12px}
+ .diagram-connector img{width:48px;transform:rotate(90deg);margin:16px 0}
+ .route-grid>.diagram-connector{min-height:48px}
+ .route-grid>.diagram-connector img,.recommendation-grid>.diagram-connector img{width:37px;height:24px;margin:8px 0}
+ .route-card{min-height:224px;padding:16px}
+ .route-return{width:100%;margin:0 0 20px}
+ .volume-groups{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:28px}
+ .volume-discussion{max-width:300px}
+ .volume-segments>span{padding:14px 12px}
+}
+@media(max-width:620px){
+ .agro-hero{margin-top:28px}
+ .agro-hero-art{aspect-ratio:1104/467}
+ .agro-hero figcaption{font-size:12px}
+ .agro-product-map{margin-top:28px}
+ .agro-product-map>div{grid-template-columns:minmax(0,1fr);gap:8px;padding:16px 0;font-size:13px}
+ .agro-subsection,.agro-interface,.agro-diagram{margin-top:32px}
+ .agro-subsection h3{font-size:19px;margin-bottom:16px}
+ .agro-subsection p{font-size:15px}
+ .agro-interface{padding:12px}
+ .agro-interface figcaption{font-size:12px;margin-top:10px}
+ .agro-diagram{padding:16px}
+ .agro-diagram h3{font-size:20px;line-height:1.4}
+ .agro-diagram>header p{font-size:13px;line-height:1.5}
+ .agro-diagram>header,.diagram-structure>header{margin-bottom:24px}
+ .agro-diagram h4{font-size:14px}
+ .workspace-columns{padding:12px}
+ .workspace-navigation{padding:16px}
+ .workspace-list-items{grid-template-columns:minmax(0,1fr)}
+ .diagram-caption{font-size:13px}
+ .diagram-caption p+p{font-size:12px}
+ .notification-row{padding:12px;font-size:12px}
+ .notification-tag{padding:4px 8px;font-size:11px}
+ .recommendation-object{padding:12px;font-size:13px}
+ .recommendation-object>div{gap:8px}
+ .object-state{padding:4px 12px}
+ .recommendation-actions{gap:8px}
+ .recommendation-actions .diagram-action{font-size:12px;padding:8px}
+ .recommendation-actions .diagram-row{padding:10px 8px;font-size:11px}
+ .volume-segments>span{font-size:11px;padding:12px 4px;text-align:center}
+}
+@media(max-width:380px){.volume-segments>span{font-size:10.5px;padding-inline:2px}}

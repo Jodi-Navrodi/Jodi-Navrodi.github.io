@@ -1,0 +1,80 @@
+/* Loca shares the portfolio type, reading grid and case spacing. */
+
+.loca-case .case-lead p{margin:0}
+.loca-case .passport{display:block;max-width:var(--case-copy)}
+.loca-case .passport dd{font-size:var(--text-body);line-height:var(--leading-body);color:var(--body)}
+.loca-case .passport{margin-bottom:28px}
+.loca-insight{max-width:var(--case-copy);font-size:var(--text-body);line-height:var(--leading-body);color:var(--body)}
+.loca-insight strong{font-weight:500}
+.loca-case .phone-shot{aspect-ratio:auto;border:0;border-radius:8px;background:transparent}
+.loca-case .phone-shot img{display:block;width:100%;height:auto}
+.loca-case .phone-shot:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.loca-case .mobile-gallery{align-items:start}
+.loca-case .mobile-gallery.two-up{grid-template-columns:repeat(2,minmax(0,280px));justify-content:center;gap:64px}
+.loca-case .mobile-gallery figure{max-width:280px}
+.loca-case .hero-gallery{margin-bottom:0}
+.loca-case .mobile-gallery figcaption{max-width:none;opacity:1;color:var(--body);font-weight:400}
+.inspection-comparison{margin-top:var(--media-gap);padding:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-card)}
+.inspection-comparison h3{font-size:var(--subheading-size);font-weight:500;line-height:1.3;margin:0 0 32px}
+.inspection-columns{display:grid;grid-template-columns:repeat(2,minmax(0,328px));justify-content:center;gap:64px}
+.inspection-columns h4{font-size:16px;font-weight:500;line-height:1.5;margin:0 0 24px}
+.inspection-columns figure+figure{margin-top:24px}
+.inspection-columns figcaption{font-size:14px;line-height:1.5;max-width:none;margin:0 0 12px;opacity:1}
+.inspection-columns img{display:block;width:100%;height:auto}
+.appearance-demo{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,300px));justify-content:center;align-items:center;gap:64px;margin-top:var(--media-gap);padding:48px 40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-card)}
+.appearance-note{font-family:var(--font-hand);font-style:italic;font-size:33px;line-height:1.1;color:var(--accent);margin:0 0 28px}
+.settings-controls{position:relative;width:100%;aspect-ratio:322/305}
+.settings-controls>img{display:block;width:100%;height:100%;object-fit:contain}
+.demo-theme button,.demo-accessibility{position:absolute;height:44px;padding:0;border:0;background:transparent;border-radius:6px;cursor:pointer;transform:translateY(-50%);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.demo-theme button{top:50.328%;width:39.337%}
+.demo-theme [data-theme=light]{left:10.663%}
+.demo-theme [data-theme=dark]{left:50%}
+.demo-accessibility{top:68.907%;left:10.663%;width:78.675%}
+.demo-theme button:focus-visible,.demo-accessibility:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.loca-case .demo-trip{aspect-ratio:322/689}
+.loca-case .demo-trip img{width:100%;height:100%;object-fit:contain}
+.demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.demo-status.is-error{position:static;grid-column:1/-1;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;font-size:14px;line-height:1.5;color:var(--body);margin:0}
+.loca-case .next-project-art{background:#f4eeee}
+.loca-review-changes,.loca-contrast,.loca-recheck{margin-top:var(--media-gap)}
+.loca-review-changes h3,.loca-contrast h3,.loca-recheck h3{font-size:var(--subheading-size);font-weight:500;line-height:1.3;margin:0 0 24px}
+.loca-change-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 64px}
+.loca-change-grid h4{font-size:18px;font-weight:500;line-height:1.4;margin:0 0 12px}
+.loca-change-grid p,.loca-recheck p,.loca-contrast .chapter-copy p{font-size:var(--text-body);line-height:var(--leading-body);color:var(--body)}
+.loca-recheck p+p,.loca-contrast .chapter-copy p+p{margin-top:20px}
+.loca-contrast table{width:100%;table-layout:fixed;border-collapse:collapse;margin-top:24px;font-size:14px;line-height:1.5;color:var(--body)}
+.loca-contrast .contrast-pair{width:60%}
+.loca-contrast th,.loca-contrast td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.loca-contrast thead th{background:var(--surface);font-weight:500}
+.loca-contrast tbody th{font-weight:400;overflow-wrap:anywhere}
+.loca-contrast td{white-space:nowrap}
+.loca-table-note{max-width:var(--case-copy);font-size:12px;line-height:1.5;color:var(--body);margin:16px 0 0}
+@media(max-width:1000px){
+
+ .loca-case .mobile-gallery.two-up{gap:40px}
+ .inspection-comparison{padding:28px}
+ .inspection-columns{gap:40px}
+ .appearance-demo{gap:40px;padding:40px 28px}
+}
+
+@media(max-width:620px){
+ .loca-case .passport dd{font-size:var(--text-body)}
+ .loca-insight{font-size:var(--text-body)}
+ .loca-review-changes,.loca-contrast,.loca-recheck{margin-top:32px}
+ .loca-review-changes h3,.loca-contrast h3,.loca-recheck h3{font-size:var(--subheading-size);margin-bottom:20px}
+ .loca-change-grid{grid-template-columns:1fr;gap:28px}
+ .loca-change-grid h4{font-size:18px;margin-bottom:8px}
+ .loca-change-grid p,.loca-recheck p,.loca-contrast .chapter-copy p{font-size:var(--text-body)}
+ .loca-contrast table{font-size:12px}
+ .loca-contrast th,.loca-contrast td{padding:12px 8px}
+ .loca-case .mobile-gallery.two-up{grid-template-columns:minmax(0,280px);gap:32px}
+ .inspection-comparison{margin-top:32px;padding:24px}
+ .inspection-comparison h3{font-size:var(--subheading-size);margin-bottom:28px}
+ .inspection-columns{grid-template-columns:minmax(0,328px);gap:32px}
+ .inspection-columns h4{font-size:15px;margin-bottom:20px}
+ .inspection-columns figure+figure{margin-top:20px}
+ .inspection-columns figcaption{font-size:12px;margin-bottom:10px}
+ .appearance-demo{grid-template-columns:minmax(0,300px);gap:32px;margin-top:32px;padding:28px 24px}
+ .appearance-note{font-size:30px;margin-bottom:24px}
+}
+@media(max-width:380px){.demo-theme button,.demo-accessibility{height:40px}}
