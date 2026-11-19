@@ -1,0 +1,3 @@
+/* Only opted-in case PNGs are hidden; without JavaScript the originals work normally. */
+.case-images-js img[data-case-preview]:not([data-case-image-state="ready"]):not([data-case-image-state="error"]){opacity:0}
+.case-image-preview{pointer-events:none;user-select:none}
