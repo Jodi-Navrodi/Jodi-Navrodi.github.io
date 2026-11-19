@@ -1,8 +1,12 @@
 /* The line grows from the pointer's entry point and retracts towards its exit. */
 (() => {
-  document.querySelectorAll('.site-header nav a,.case-nav a').forEach(link => {
+  const initialized = new WeakSet();
+  function initialize(root = document) {
+  root.querySelectorAll('.site-header nav a,.case-nav a,.site-footer-links a').forEach(link => {
+    if (initialized.has(link)) return;
     const label = link.querySelector('.menu-label');
     if (!label) return;
+    initialized.add(link);
     const setOrigin = event => {
       if (event.pointerType !== 'mouse') return;
       const {left, width} = label.getBoundingClientRect();
@@ -14,4 +18,7 @@
     link.addEventListener('pointerleave', setOrigin, {passive:true});
     link.addEventListener('focus', () => label.style.setProperty('--menu-origin', '50%'));
   });
+  }
+  window.initializeMenuHover = initialize;
+  initialize();
 })();
