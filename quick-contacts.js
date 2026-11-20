@@ -6,8 +6,8 @@
   if (!header || !main) return;
   // Document language is always chosen by the visitor, never by the site locale.
   const resumes = [
-    {lang:'ru', labels:{ru:'На русском', en:'In Russian'}, href:'/assets/evgeniya-khrenova-cv-ru.pdf?v=afa895e512cb'},
-    {lang:'en', labels:{ru:'На английском', en:'In English'}, href:'/assets/evgeniya-khrenova-cv-en.pdf?v=892343059786'}
+    {lang:'ru', labels:{ru:'На русском', en:'In Russian'}, href:'/assets/evgeniya-khrenova-cv-ru.pdf?v=a2b9ec9834b4'},
+    {lang:'en', labels:{ru:'На английском', en:'In English'}, href:'/assets/evgeniya-khrenova-cv-en.pdf?v=d33aac07e9d7'}
   ];
   const catalogue = {
     resume:{ru:'Резюме / CV', en:'Резюме / CV'},
