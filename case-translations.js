@@ -94,7 +94,6 @@ window.caseTranslations={
   "Интерфейсы в разработке, сопровождение продолжается": "Interfaces are in development; support continues",
   "В разработку передала интерфейсы шести пользовательских ролей и трёх back‑office кабинетов. Продолжаю сопровождать реализацию: проверяю соответствие макетам, фиксирую расхождения в Trello и повторно проверяю исправления. Параллельно дорабатываю оставшиеся состояния и детали интерфейса.": "I have handed off interfaces for six user roles and three back‑office workspaces. I continue to support implementation: check it against the designs, record discrepancies in Trello and review fixes. In parallel, I refine the remaining states and interface details.",
   "вернуться к проектам": "back to projects",
-  "Резюме": "Resume",
   "CryptoPulse — Евгения Хренова": "CryptoPulse — Evgeniya Khrenova",
   "Мобильное приложение": "Mobile app",
   "Медиапродукт": "Media product",
